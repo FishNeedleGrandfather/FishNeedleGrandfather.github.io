@@ -1,31 +1,33 @@
 # 余振烨的个人主页
 
-一个无需构建工具的静态个人主页，可部署到 GitHub Pages。页面内容根据现有简历整理；项目配图是概念示意图。
+这是一个可直接发布到 GitHub Pages 的静态网站。仓库根目录包含 `index.html`，无需安装依赖或执行构建命令。
 
-## 本地查看
+## 本地预览
 
-直接打开 `index.html` 即可。若要用本地服务器预览，在本目录运行：
+在仓库根目录运行：
 
 ```powershell
 python -m http.server 8000
 ```
 
-然后访问 `http://localhost:8000/`。
+然后打开 `http://localhost:8000/`。
 
 ## 发布到 GitHub Pages
 
-1. 在 GitHub 新建一个**公开仓库**。GitHub Free 的 Pages 可用于公开仓库。
-2. **仅上传本目录中的文件**到新仓库根目录：`index.html`、`styles.css`、`script.js`、`assets/`、`.nojekyll`。不要上传上级目录的原始简历、成绩表等资料。
-3. 打开仓库 **Settings → Pages**，在 **Build and deployment** 中选择 **Deploy from a branch**，选择 `main` 和 `/(root)`，保存。
-4. 等待 GitHub 完成发布，页面地址会显示在 Pages 设置页。
+在 GitHub 创建一个空的公开仓库，推荐命名为 `YOUR_USERNAME.github.io`。把下面命令中的 `YOUR_USERNAME` 和 `REPO_NAME` 换成真实值后，在本仓库目录运行：
 
-本站所有资源均使用相对路径，因此也适用于 `用户名.github.io/仓库名/` 形式的项目站点。
+```powershell
+git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+git push -u origin main
+```
 
-## 修改内容
+在 GitHub 仓库的 **Settings → Pages** 中，将 **Build and deployment** 设为 **Deploy from a branch**，分支选择 `main`，目录选择 `/(root)`，然后保存。个人站点仓库的网址是 `https://YOUR_USERNAME.github.io/`；其他仓库的网址是 `https://YOUR_USERNAME.github.io/REPO_NAME/`。
 
-- 个人资料、项目和获奖经历：编辑 `index.html`。
-- 颜色和排版：编辑 `styles.css`。
-- 照片：替换 `assets/portrait.jpg`，保持文件名即可。
-- 邮箱：搜索 `3410351502@qq.com` 后统一替换。
+## 修改网站
 
-本版未公开手机号、出生日期、课程成绩、GPA 或排名。发布前请再次检查页面内容是否符合你的公开意愿。
+- 内容：`index.html`
+- 样式：`styles.css`
+- 照片：`assets/portrait.jpg`
+- 图标：`assets/favicon.svg`
+
+网站展示照片和邮箱，不展示手机号、出生日期、GPA 或排名。
