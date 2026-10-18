@@ -1,33 +1,27 @@
-# 余振烨的个人主页
+# 余振烨
 
-这是一个可直接发布到 GitHub Pages 的静态网站。仓库根目录包含 `index.html`，无需安装依赖或执行构建命令。
+北京理工大学电子科学与技术专业（王小谟英才班）在读，关注**计算电磁、天线仿真与 AI for EM**。
 
-## 本地预览
+我喜欢从方程和算法原理出发，把数值方法写成程序，再通过仿真和结果对照检验实现。近期的实践涵盖矩量法、有限元法、天线建模，以及图网络辅助电磁散射计算。
 
-在仓库根目录运行：
+## 研究与项目
 
-```powershell
-python -m http.server 8000
-```
+- **线天线的 MoM 仿真**：从 Pocklington 积分方程出发实现求解程序，计算线天线、八木天线和螺旋天线的电流分布与远场方向图。
+- **任意形状波导的 FEM 模式求解**：实现网格边界自动识别、单元矩阵组装和特征值求解，计算截止频率与本征场分布。
+- **液态金属可重构八木天线复现**：使用 HFSS 完成三维建模与仿真，对比论文中的 S 参数曲线，分析增益和辐射方向图。
+- **PO–MoM 耦合量学习**：搭建批量仿真流程生成电磁样本，使用 GCN、GAT 和神经算子探索 RCS 耦合量的学习方法。
 
-然后打开 `http://localhost:8000/`。
+## 技术方向
 
-## 发布到 GitHub Pages
+`MoM` · `FEM` · `FDTD` · `FEKO` · `HFSS` · `Python` · `C` · `MATLAB` · `PyTorch` · `GNN`
 
-在 GitHub 创建一个空的公开仓库，推荐命名为 `YOUR_USERNAME.github.io`。把下面命令中的 `YOUR_USERNAME` 和 `REPO_NAME` 换成真实值后，在本仓库目录运行：
+## 荣誉
 
-```powershell
-git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
-git push -u origin main
-```
+- 国家奖学金
+- 全国大学生数学建模竞赛北京市一等奖
+- 美国大学生数学建模竞赛 Honorable Mention
+- 全国大学生数学竞赛（非数学 A 类）一等奖
 
-在 GitHub 仓库的 **Settings → Pages** 中，将 **Build and deployment** 设为 **Deploy from a branch**，分支选择 `main`，目录选择 `/(root)`，然后保存。个人站点仓库的网址是 `https://YOUR_USERNAME.github.io/`；其他仓库的网址是 `https://YOUR_USERNAME.github.io/REPO_NAME/`。
+## 联系
 
-## 修改网站
-
-- 内容：`index.html`
-- 样式：`styles.css`
-- 照片：`assets/portrait.jpg`
-- 图标：`assets/favicon.svg`
-
-网站展示照片和邮箱，不展示手机号、出生日期、GPA 或排名。
+欢迎交流计算电磁、天线仿真和 AI for EM 相关问题：**3410351502@qq.com**。
